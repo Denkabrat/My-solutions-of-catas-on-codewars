@@ -1,0 +1,13 @@
+function squareSum(numbers){
+
+    let count  = 0;
+
+    const arr = numbers.map(item => {
+        return Math.pow(item,2),count += item;;
+        
+    })
+    console.log(arr);
+
+  }
+squareSum([5,3,7]);
+

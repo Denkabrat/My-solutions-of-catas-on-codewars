@@ -1,0 +1,10 @@
+function highAndLow(numbers){
+  
+    let test = numbers.split(' ');
+
+   
+        return Math.max(...test) + ' ' + Math.min(...test);
+    
+  }
+
+  console.log(highAndLow('232 322 -2'));

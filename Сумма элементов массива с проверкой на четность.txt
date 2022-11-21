@@ -1,0 +1,15 @@
+function oddOrEven(array) {
+    
+    if(array.reduce(function(sum, elem){
+        return sum + elem;
+    },0)){
+        return 'even';
+    }else{
+        return "odd";
+    }
+
+
+ }
+console.log(oddOrEven([2,4,5,3]));
+
+

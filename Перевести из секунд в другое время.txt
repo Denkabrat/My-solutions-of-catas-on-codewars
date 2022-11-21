@@ -1,0 +1,28 @@
+function formatDuration (seconds) {
+ 
+    if(!seconds) return 'now';
+    let s = seconds%60;
+    seconds = (seconds-s)/60;
+    let m = seconds%60;
+    seconds = (seconds-m)/60;
+    let h = seconds%24;
+    seconds = (seconds-h)/24;
+    let d = seconds%365;
+    seconds = (seconds-d)/365;
+    let y = seconds;
+
+    const arrayDates = [];
+
+    if(y)arrayDates.push(y+ ' year'+(y>1?'s':''));
+    if(d)arrayDates.push(d+ ' day'+(d>1?'s':''));
+    if(h)arrayDates.push(h+ ' hour'+(h>1?'s':''));
+    if(m)arrayDates.push(m+ ' minute'+(m>1?'s':''));
+    if(s)arrayDates.push(s+ ' second'+(s>1?'s':''));
+
+
+    
+    return arrayDates.join(", ").replace(/,([^,]*)$/," and$1");
+    
+  }
+
+  console.log(formatDuration(223))

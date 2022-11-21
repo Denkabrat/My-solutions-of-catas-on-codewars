@@ -1,0 +1,15 @@
+const animals = ['rat','buffalo','tigger','bunny','dragon','snake','horse','sheep','monkey','rooster','dog','pig'];
+
+const Year = (n) => {
+
+   let counter = n % 12;
+
+
+   if(counter > animals.length || counter < 0)  return "ERROR404";
+    
+        return animals[counter - 1]; 
+
+}
+
+
+console.log(`You was born at ${Year(2010)} year`);
